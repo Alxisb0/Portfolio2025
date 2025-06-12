@@ -2,27 +2,103 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Minimal</title>
-  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-  <header>
-    <h1>Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">UE 1</a></li>
-        <li><a href="#">UE 2</a></li>
-      </ul>
-    </nav>
+    main {
+      flex: 1;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mon Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="detail2.html">figure 2 (UE 1.2)</a></li>
+          <li class="nav-item"><a class="nav-link" href="detail1.html">figure 1 (UE 2.4)</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1>Alexis Bollengier</h1>
+      <p class="lead">Étudiant en informatique à l'IUT Nord Franche-Comté</p>
+    </div>
   </header>
 
-  <main class="conteneur">
-    <a href="sae1.html" class="carre">UE 1.2 Optimiser des applications informatiques </a>
-    <a href="sae2.html" class="carre">UE 1.3</a>
-  </main>
+  <section id="projets" class="container my-5">
+    <h3>La formation comporte 6 compétences (UE) à acquérir :</h3>
+    <ul>
+      <li>UE 1 : Réaliser un développement d'application</li>
+      <li>UE 2 : Optimiser des applications informatiques</li>
+      <li>UE 3 : Administrer des systèmes informatiques communicants complexes</li>
+      <li>UE 4 : Gérer des données de l'information</li>
+      <li>UE 5 : Conduire un projet</li>
+      <li>UE 6 : Collaborer au sein d'une équipe informatique</li>
+    </ul>
+    <h2 class="text-center mb-4">Mes Projets</h2>
+    <h4 class="mt-4">Dans ce portfolio, je vais vous présenter deux de mes projets illustrant l'application d'une compétence issues d'une UE, réalisés en travail de groupe (SAE).</h4>
+    <div class="row g-4 mt-3 justify-content-center">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="detail1.html">
+            <img src="figure1_0.png" class="card-img-top" alt="Figure 1">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><br>Figure 1 (UE 2.4)</h5>
+            <p class="card-text">Interface administrateur pour mettre à jour les données d'un produit </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="detail2.html">
+            <img src="figure2.png" class="card-img-top" alt="Figure 2">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Figure 2 (UE 1.2)</h5>
+            <p class="card-text">Mesure précise des performances en Java.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p>© 2025 Alexis Bollengier</p>
+      <p>
+        <a href="mailto:alexisbollengier2@gmail.com" class="text-white">Contactez-moi</a> |
+        <a href="https://github.com/Alxisb0" target="_blank" class="text-white">GitHub</a> |
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Figure 2 - Détail</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <style>
+        body {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+      
+        main {
+          flex: 1;
+        }
+      </style>
+      
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Mon Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#projets">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="detail2.html">figure 2 (UE 1.2)</a></li>
+        <li class="nav-item"><a class="nav-link" href="detail1.html">figure 1 (UE 2.4)</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="my-5 text-center">
+  <h2>Figure 2</h2>
+  <img src="figure2.png" alt="Figure 2" style="width: 70vw; height: auto; max-height: 90vh;" />
+  <p class="mt-3">
+    Mesure précise des performances en Java.
+  </p>
+
+  <article class="mt-5 mx-auto" style="max-width: 800px; text-align: justify; line-height: 1.6;">
+    <p>
+      La Figure 2 est une capture d’écran de l’environnement de développement VS Code, montrant une partie du code de la classe Profiler, développée dans le cadre de la SAE 1.02. Ce projet avait pour objectif de mesurer précisément le temps d’exécution de différentes méthodes de corrélation croisée du vocodeur, implémenté auparavant dans la SAE 1.01.<br><br>
+      La classe Profiler utilise une méthode principale appelée analyse() qui permet de mesurer combien de temps une fonction met à s’exécuter. Pour cela, elle utilise la méthode System.nanoTime() de Java, qui donne l’heure exacte en nanosecondes pour obtenir une mesure très précise de la durée d’exécution du code testé.<br>
+      Cela m’a permis de comprendre comment <strong>utiliser correctement les timestamps</strong> pour calculer des durées précises.<br><br>
+      Concrètement, dès que l’exécution de la fonction à mesurer commence, on enregistre ce temps précis appelé « timestamp de départ ». Une fois la fonction terminée, on prend un autre timestamp appelé « timestamp de fin ». En faisant la différence entre ces deux valeurs, on obtient la durée d’exécution exacte de cette fonction.<br><br>
+      Chaque durée mesurée est ensuite ajoutée à un total appelé « temps global », et on compte aussi combien de fois la fonction a été appelée. Ces deux informations permettent de calculer ensuite des statistiques, comme le temps total passé à exécuter la fonction et la durée moyenne d’un appel.<br>
+      J’ai appris à <strong>agréger ces durées sur plusieurs appels</strong> pour obtenir des statistiques utiles et fiables.<br><br>
+      Cette approche permet d’obtenir des résultats fiables et précis, en accumulant plusieurs mesures au lieu de se baser sur une seule exécution, qui pourrait être affectée par des variations temporaires du système.<br><br>
+      La classe Profiler est conçue pour être très générique : elle accepte en paramètre une fonction à tester (sous forme d’interface fonctionnelle), ainsi que les données d’entrée nécessaires à cette fonction. Cela facilite la comparaison entre différentes versions d’un même algorithme, en garantissant que chaque test est réalisé dans les mêmes conditions.<br>
+      J’ai également appris à <strong>structurer mon code pour rendre ces mesures automatiques et reproductibles</strong>, ce qui est essentiel pour évaluer et améliorer les performances d’un programme.<br><br>
+      Enfin, bien que ce code ne réalise pas directement la comparaison entre plusieurs méthodes, il constitue la base essentielle qui a été utilisée par une autre partie du projet pour tester différentes versions de la corrélation croisée avec les mêmes données, et ainsi identifier les améliorations possibles en termes de rapidité.
+    </p>
+  </article>
+</main>
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <p>© 2025 Alexis Bollengier</p>
+      <p>
+        <a href="mailto:alexisbollengier2@gmail.com" class="text-white">Contactez-moi</a> |
+        <a href="https://github.com/Alxisb0" target="_blank" class="text-white">GitHub</a> |
+      </p>
+    </div>
+  </footer>
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
