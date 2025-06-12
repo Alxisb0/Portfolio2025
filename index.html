@@ -26,6 +26,17 @@
       transform: scale(1.05);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
+
+    .badge {
+      margin-right: 5px;
+    }
+
+    .highlight {
+      background-color: #e9f5ff;
+      padding: 10px;
+      border-left: 4px solid #0d6efd;
+      border-radius: 5px;
+    }
   </style>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,8 +48,8 @@
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="detail2.html">figure 2 (UE 1.2)</a></li>
-          <li class="nav-item"><a class="nav-link" href="detail1.html">figure 1 (UE 2.4)</a></li>
+          <li class="nav-item"><a class="nav-link" href="detail2.html">Figure 2 (UE 1.2)</a></li>
+          <li class="nav-item"><a class="nav-link" href="detail1.html">Figure 1 (UE 2.4)</a></li>
         </ul>
       </div>
     </div>
@@ -48,37 +59,93 @@
     <div class="container">
       <h1>Alexis Bollengier</h1>
       <p class="lead">Étudiant en informatique à l'IUT Nord Franche-Comté</p>
+      <span class="badge bg-light text-dark">Java</span>
+      <span class="badge bg-light text-dark">HTML/CSS</span>
+      <span class="badge bg-light text-dark">SQL</span>
+      <span class="badge bg-light text-dark">Linux</span>
     </div>
   </header>
 
   <section id="projets" class="container my-5">
-    <h3>La formation comporte 6 compétences (UE) à acquérir :</h3>
-    <ul>
-      <li>UE 1 : Réaliser un développement d'application</li>
-      <li>UE 2 : Optimiser des applications informatiques</li>
-      <li>UE 3 : Administrer des systèmes informatiques communicants complexes</li>
-      <li>UE 4 : Gérer des données de l'information</li>
-      <li>UE 5 : Conduire un projet</li>
-      <li>UE 6 : Collaborer au sein d'une équipe informatique</li>
-    </ul>
+    <div class="highlight mb-4">
+      <h4>Qui-suis-je ?</h4>
+      <p>Passionné par la programmation, j’ai suivi la spécialité NSI en Première et Terminale. Je m’intéresse particulièrement au développement de sites web et d’applications.</p>
+      <h4>Formation</h4>
+      <p>Actuellement étudiant en première année de <strong>B.U.T. Informatique</strong> à l’IUT Nord Franche-Comté, composante de l’Université Marie et Louis Pasteur, j’apprends à maîtriser les fondamentaux de l’informatique à travers six compétences clés, réparties en unités d'enseignement (UE).</p>
+    </div>
+
+    <p><strong>UE 1 : Réaliser un développement d'application</strong><br>
+    Développer — c’est-à-dire concevoir, coder, tester et intégrer — une solution informatique pour un client.</p>
+
+    <p><strong>UE 2 : Optimiser des applications informatiques</strong><br>
+    Proposer des applications informatiques optimisées en fonction de critères spécifiques : temps d’exécution, précision, consommation de ressources…</p>
+
+    <p><strong>UE 3 : Administrer des systèmes informatiques communicants complexes</strong><br>
+    Installer, configurer, maintenir et optimiser les systèmes informatiques et réseaux d’une organisation.</p>
+
+    <p><strong>UE 4 : Gérer des données de l'information</strong><br>
+    Concevoir, gérer, administrer et exploiter les données de l’entreprise pour faciliter le pilotage stratégique.</p>
+
+    <p><strong>UE 5 : Conduire un projet</strong><br>
+    Organiser et piloter un projet informatique en équipe, en respectant les besoins utilisateurs et les méthodes agiles.</p>
+
+    <p><strong>UE 6 : Collaborer au sein d'une équipe informatique</strong><br>
+    Développer les aptitudes nécessaires pour travailler efficacement en équipe dans un environnement numérique.</p>
+
+    <h4 class="mt-5">Compétences techniques</h4>
+    <p>Voici une estimation de mes compétences actuelles, développées au cours des deux premiers semestres :</p>
+
+    <div class="mb-3">
+      <label>Java</label>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 60%;">60%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>HTML / CSS</label>
+      <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" style="width: 70%;">70%</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>SQL</label>
+      <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;">75%</div>
+      </div>
+    </div>
+
+
+    <div class="mb-3">
+      <label>Linux</label>
+      <div class="progress">
+        <div class="progress-bar bg-secondary" role="progressbar" style="width: 40%;">40%</div>
+      </div>
+    </div>
+
+    <hr class="my-5">
+
     <h2 class="text-center mb-4">Mes Projets</h2>
-    <h4 class="mt-4">Dans ce portfolio, je vais vous présenter deux de mes projets illustrant l'application d'une compétence issues d'une UE, réalisés en travail de groupe (SAE).</h4>
+    <p class="text-center">Dans ce portfolio, je vais vous présenter deux images de projets (SAE) illustrant des compétences clés acquises au cours de ma formation.</p>
+
     <div class="row g-4 mt-3 justify-content-center">
       <div class="col-md-4">
         <div class="card h-100">
           <a href="detail1.html">
-            <img src="figure1_0.png" class="card-img-top" alt="Figure 1">
+            <img src="figure1_0.png" class="card-img-top" alt="Interface administrateur - Figure 1">
           </a>
           <div class="card-body">
-            <h5 class="card-title"><br>Figure 1 (UE 2.4)</h5>
-            <p class="card-text">Interface administrateur pour mettre à jour les données d'un produit </p>
+            <h5 class="card-title">Figure 1 (UE 2.4)</h5>
+            <p class="card-text">Interface administrateur permettant la mise à jour dynamique des données d’un produit.</p>
           </div>
         </div>
       </div>
+
       <div class="col-md-4">
         <div class="card h-100">
           <a href="detail2.html">
-            <img src="figure2.png" class="card-img-top" alt="Figure 2">
+            <img src="figure2.png" class="card-img-top" alt="Mesure de performances Java - Figure 2">
           </a>
           <div class="card-body">
             <h5 class="card-title">Figure 2 (UE 1.2)</h5>
@@ -93,8 +160,8 @@
     <div class="container">
       <p>© 2025 Alexis Bollengier</p>
       <p>
-        <a href="mailto:alexisbollengier2@gmail.com" class="text-white">Contactez-moi</a> |
-        <a href="https://github.com/Alxisb0" target="_blank" class="text-white">GitHub</a> |
+        <a href="mailto:alexisbollengier2@gmail.com" class="text-white">Contact</a> |
+        <a href="https://github.com/Alxisb0" target="_blank" class="text-white">GitHub</a>
       </p>
     </div>
   </footer>
